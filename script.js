@@ -57,29 +57,3 @@ window.onload = () => {
     filterImg[i].setAttribute("onclick", "preview(this)"); 
   }
 }
-
-const seletorItem = document.querySelector(".seletor .value");
-const seletorImg = document.querySelectorAll(".gallery .image");
-
-window.onload = () => { 
-  (selectedItem) => { 
-    if (selectedItem.target.classList.contains("item")) { 
-      seletorItem.querySelector(".active").classList.remove("active"); 
-      selectedItem.target.classList.add("active"); 
-      let seletorName = selectedItem.target.getAttribute("value"); 
-      seletorImg.forEach((image) => {
-        let seletorImges = image.getAttribute("value"); 
-        if ((seletorImges == seletorName) || (seletorName == "Dia da Semana")) {
-          image.classList.remove("hide"); 
-          image.classList.add("show"); 
-        } else {
-          image.classList.add("hide");
-          image.classList.remove("show");
-        }
-      });
-    }
-  }
-  for (let i = 0; i < seletorImg.length; i++) {
-    seletorImg[i].setAttribute("onclick", "preview(this)"); 
-  }
-}

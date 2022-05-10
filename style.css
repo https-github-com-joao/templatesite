@@ -170,7 +170,7 @@ nav .search-icon {
     nav {
         padding: 0 20px;
     }
-    
+
 }
 
 @media (max-width: 1140px) {
@@ -297,7 +297,8 @@ main {
     justify-content: center;
     align-items: center;
 }
-.seletor{
+
+.seletor {
     display: none;
     border-color: #4C11EA;
 }
@@ -368,14 +369,17 @@ main {
         transform: scale(1);
     }
 }
-@media (max-width: 1140px){
-    .items span{
+
+@media (max-width: 1140px) {
+    .items span {
         display: none;
     }
-    .seletor{
+
+    .seletor {
         display: inline-block;
     }
 }
+
 @media (max-width: 1000px) {
     .gallery .image {
         width: calc(100% / 3);
@@ -415,4 +419,118 @@ main {
     .gallery .image {
         width: 100%;
     }
+}
+
+/* Rodapé*/
+
+.footer {
+    padding: 50px 0;
+    background-color: #1A1919;
+    color: #dadada;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #4C11EA;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul a:hover {
+    opacity: 1;
+}
+
+.footer .icons-social {
+    text-align: right;
+    font-size: 28px;
+
+
+
+}
+
+.icons-social .facebook {
+    color: #3b64a5;
+}
+
+.icons-social .twitter {
+    color: #00acee;
+}
+
+.icons-social .youtube {
+    color: #c4302b;
+    margin-right: 5px;
+}
+
+.icons-social .instagram {
+
+    color: #d1008b
+}
+
+
+
+
+@media (max-width:767px) {
+    .footer .item {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .item.social {
+        text-align: center;
+    }
+}
+
+.footer .item.social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #1A1919;
+    margin-left: 10px;
+    margin-top: 22px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer .item.social>a:hover {
+    opacity: 0.9;
+}
+
+@media (max-width:991px) {
+    .footer .item.social>a {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .footer .item.social>a {
+        margin-top: 10px;
+    }
+}
+
+.footer .copyright {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
 }
