@@ -32,16 +32,25 @@
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Feedback</a></li>
             </div>
-            <div class="login-icon">
-                <span class="fas fa-user"> LOGIN</span>
-            </div>
+
             <div class="search-icon">
                 <span class="fas fa-search"></span>
             </div>
+            <div class="login-icon">
+                <span class="fas fa-user"></span>
+            </div>
+
+            <div class="btn-search">
+                <span><i class="fas fa-search"> </i> Buscar</span>
+            </div>
+            <div class="btn-login">
+                <span><i class="fas fa-user "></i> Login</span>
+            </div>
+
             <div class="cancel-icon">
                 <span class="fas fa-times"></span>
             </div>
-            <form action="#">
+            <form action="#" class="form">
                 <input type="search" class="search-data" placeholder="Search" required>
                 <button type="submit" class="fas fa-search"></button>
             </form>
@@ -85,7 +94,6 @@
         </div>
         </div>
         <div class="wrapper">
-            <!-- filter Items -->
             <nav>
                 <div class="items">
                     <span class="item active" data-name="segunda">Segunda</span>
@@ -94,9 +102,18 @@
                     <span class="item" data-name="terca">Quinta</span>
                     <span class="item" data-name="segunda">Sexta</span>
                     <span class="item" data-name="terca">Sábado</span>
-                    <span class="item" data-name="domingo">Domingo</span>
-                </div>
+                    <span class="item" data-name="domingo">Domingo</span>  </div>
             </nav>
+            <select class="form-select seletor" aria-label="Default select example">
+                <option selected>Dia da Semana</option>
+                <option value="segunda">Segunda</option>
+                <option value="terca">Terça</option>
+                <option value="segunda">Quarta</option>
+                <option value="terca">Quinta</option>
+                <option value="segunda">Sexta</option>
+                <option value="terca">Sábado</option>
+                <option value="domingo">Domingo</option>
+              </select>
 
             <div class="gallery">
                 <div class="image" data-name="segunda"><a href="#"><img src="img/cartaz_BobsBurgers.png" alt=""></a>

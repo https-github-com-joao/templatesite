@@ -15,7 +15,6 @@ body {
 }
 
 /* Cabeçalho*/
-
 nav {
     background: #1A1919;
     display: flex;
@@ -24,6 +23,7 @@ nav {
     justify-content: space-between;
     height: 70px;
     padding: 0 100px;
+
 }
 
 nav .nav-items {
@@ -42,35 +42,60 @@ nav .nav-items li a {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    display: none;
 }
 
 nav .nav-items li a:hover {
     color: #4C11EA;
 }
 
+.btn-login,
+.btn-search {
+    padding: 5px 10px;
+    color: #f9f9f9;
+    background-color: #4C11EA;
+    border: 1px solid #434247;
+    border-radius: 30px;
+    margin-left: 1%;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+}
+
 nav form {
     display: flex;
-    height: 40px;
-    padding: 2px;
+    height: 38px;
+    padding: 5px;
     background: #1e232b;
     min-width: 15% !important;
     border-radius: 10px;
     border: 1px solid rgba(155, 155, 155, 0.2);
+
+}
+
+.form {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
 }
 
 nav form .search-data {
-    width: 100%;
+    width: 90%;
     height: 100%;
     padding: 0 10px;
     color: #fff;
     font-size: 17px;
-    border: none;
     font-weight: 500;
+    border: none;
     background: none;
 }
 
 nav form button {
-    padding: 0 15px;
+    padding: 0 10px;
     color: #fff;
     font-size: 17px;
     background: #4C11EA;
@@ -80,7 +105,45 @@ nav form button {
 }
 
 nav form button:hover {
-    background: #4C11EA;
+    background: #240677;
+}
+
+
+nav form.active {
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+nav form:before {
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+}
+
+nav form:after {
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav .cancel-icon.show {
+    display: block;
 }
 
 nav .login-icon,
@@ -96,6 +159,7 @@ nav .search-icon {
     display: none;
 }
 
+nav .btn-search.hide,
 nav .menu-icon span,
 nav .cancel-icon,
 nav .search-icon {
@@ -104,8 +168,9 @@ nav .search-icon {
 
 @media (max-width: 1245px) {
     nav {
-        padding: 0 50px;
+        padding: 0 20px;
     }
+    
 }
 
 @media (max-width: 1140px) {
@@ -145,54 +210,17 @@ nav .search-icon {
         font-size: 20px;
     }
 
-    nav form {
-        position: absolute;
-        border-radius: 50px;
-        top: 80px;
-        right: 50px;
-        opacity: 0;
-        z-index: 1;
-        pointer-events: none;
-        transition: top 0.3s ease, opacity 0.1s ease;
+    .btn-login,
+    .btn-search {
+        display: none;
     }
 
-    nav form.active {
-        top: 95px;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    nav form:before {
-        position: absolute;
-        content: "";
-        top: -13px;
-        right: 0px;
-        width: 0;
-        height: 0;
-        z-index: -1;
-        border: 10px solid transparent;
-        border-bottom-color: #1e232b;
-        margin: -20px 0 0;
-    }
-
-    nav form:after {
-        position: absolute;
-        content: '';
-        height: 60px;
-        padding: 2px;
-        background: #1e232b;
-        border-radius: 2px;
-        min-width: calc(100% + 20px);
-        z-index: -2;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
 
     nav .menu-icon {
         display: block;
     }
 
+    nav .login-icon,
     nav .search-icon,
     nav .menu-icon span {
         display: block;
@@ -201,10 +229,6 @@ nav .search-icon {
     nav .menu-icon span.hide,
     nav .search-icon.hide {
         display: none;
-    }
-
-    nav .cancel-icon.show {
-        display: block;
     }
 }
 
@@ -271,6 +295,11 @@ main {
     max-width: 1100px;
     width: 100%;
     justify-content: center;
+    align-items: center;
+}
+.seletor{
+    display: none;
+    border-color: #4C11EA;
 }
 
 .items span {
@@ -309,6 +338,7 @@ main {
     display: flex;
     width: 100%;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .gallery .image img {
@@ -338,7 +368,14 @@ main {
         transform: scale(1);
     }
 }
-
+@media (max-width: 1140px){
+    .items span{
+        display: none;
+    }
+    .seletor{
+        display: inline-block;
+    }
+}
 @media (max-width: 1000px) {
     .gallery .image {
         width: calc(100% / 3);
