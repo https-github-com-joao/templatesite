@@ -54,6 +54,7 @@ nav .nav-items li a:hover {
     cursor: pointer;
     font-weight: 500;
     font-size: 17px;
+    display: none;
 }
 
 nav form {
