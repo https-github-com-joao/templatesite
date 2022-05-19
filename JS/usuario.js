@@ -1,12 +1,12 @@
 function cadastraUsuario() {
     let data = {
-        nome: document.getElementById('nome'),
-        cpf: document.getElementById('cpf'),
-        email: document.getElementById('email'),
-        senha: document.getElementById('senha'),
-        dt_nascimento: document.getElementById('dt_nascimento')
+        nome: document.getElementById('nome').value,
+        cpf: document.getElementById('cpf').value,
+        email: document.getElementById('email').value,
+        senha: document.getElementById('senha').value,
+        dt_nascimento: document.getElementById('dt_nascimento').value
     }
-    axios.post('http://localhost:3001/api/v1/usuario', data, headers())
+    axios.post('http://localhost:3001/api/v1/usuario', data)
     .then(res => {
         alert('cadastro realizado com sucesso.');
         document.location = 'login.html';
@@ -16,7 +16,7 @@ function cadastraUsuario() {
 
 function login() {
 
-    axios.post('http://localhost:3001/api/v1/usuario/login', data, headers())
+    axios.post('http://localhost:3001/api/v1/usuario/login', data)
     .then(res => {
         localStorage.setItem('token', res.data.token)
         document.location = 'index.html';
