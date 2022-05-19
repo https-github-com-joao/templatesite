@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,71 @@
     <link rel="stylesheet" href="css/stylecadastro.css">
     <title>Registro</title>
 </head>
+
 <body>
-    <section class="area-cadastro">
-        <div class="cadastro">
-           <div>
-               <img src="">
-               <form method="post">
-                   <input type="text" name="nome" placeholder="nome de usúario" autofocus>
-                   <input type="text" name="email" placeholder="seu email" autofocus>
-                   <input type="date" name="Data" placeholder="Data de nascimento" autofocus>
-                   <input type="password" placeholder="Senha" id="password" required>
-                   <input type="submit" value="Criar conta?">
-               </form>
-               <p> Ja tem sua conta? <a href="login.html">Login</a></p>
-           </div>
-        </div>
-       </section>
+    <header>
+
+        <nav>
+            <div class="menu-icon">
+                <span class="fas fa-bars"></span>
+            </div>
+            <div class="logo">
+                <a href="/index.html"><img src="img/LOGO.png" alt="" width="120" height="auto"></a>
+            </div>
+            <div class="nav-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </div>
+
+            <div class="search-icon">
+                <span class="fas fa-search"></span>
+            </div>
+            <div class="login-icon">
+                <span class="fas fa-user"></span>
+            </div>
+
+            <div class="btn-search">
+                <span><i class="fas fa-search"> </i> Buscar</span>
+            </div>
+            <div class="btn-login">
+                <span><i class="fas fa-user "></i> Login</span>
+            </div>
+
+            <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+            </div>
+            <form action="#" class="form">
+                <input type="search" class="search-data" placeholder="Search" required>
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+        </nav>
+
+    </header>
+    <main>
+        <section class="area-cadastro">
+            <div class="cadastro">
+                <div>
+                    <h2>CADASTRO</h2>
+                    <form method="post">
+                        <input type="text" name="nome" placeholder="nome de usúario" id="nome" required>
+                        <input type="text" name="email" placeholder="seu email" id="email" required>
+                        <input type="text" name="cpf" placeholder="seu CPF" id="cpf" required>
+                        <input type="date" name="dt_nascimento" placeholder="Data de nascimento" id="dt_nascimento" required>
+                        <input type="password" placeholder="Senha" id="senha" required>
+                        <input type="submit" value="Criar conta">
+                    </form>
+                    <p> Ja tem sua conta? <a href="javascript: cadastraUsuario()">Login</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/usuario.js"></script>
 </body>
+
 </html>

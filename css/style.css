@@ -1,74 +1,20 @@
-*{
-margin: 0%;
-padding: 0%;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    background-color:#1b2027;
-}
-.area-login{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 
-}
-.login{
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #13161b;
-    width: 355px;
-    height: 320px;
-    padding: 35px;
-}
-.login form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.login input{
-    margin-top: 10px;
-    background-color: #1b2027;
-    color: rgba(204, 204, 204, 0.842);
-    padding-left: 10px;
-    border: none;
-    height: 45px;
+* {
+    margin: 0;
+    padding: 0;
     outline: none;
-    border-radius: 8px;
-    padding-left: 10px;
-
-}
-.login img{
-    width: 100px;
-    height: auto;
-}
-input::placeholder{
-color: rgba(204, 204, 204, 0.842);
-font-size: 14px;
-}
-form [type="submit"]{
-display: block;
-background-color: #5568fe;
-font-size: 20px;
-text-transform: uppercase;
-font-weight: bolder;
-cursor: pointer;
-}
-p{
-    color: rgba(204, 204, 204, 0.842);   
-}
-a{
-color: #5568fe;
-text-decoration: none;
-margin-left: 5px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/*CABEÇALHO*/
+body {
+    background-image: url(../img/bg-site.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+/* Cabeçalho*/
 nav {
     background: #1A1919;
     display: flex;
@@ -200,6 +146,15 @@ nav .cancel-icon.show {
     display: block;
 }
 
+.btn-login a{
+    text-decoration: none;
+    color: #dadada;
+}
+.btn-search a{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
 nav .login-icon,
 nav .menu-icon,
 nav .cancel-icon,
@@ -312,4 +267,279 @@ nav .logo.space {
         margin: 0 10px;
         font-size: 16px;
     }
+}
+
+/*Carosseul*/
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    background: rgba(43, 42, 42, 0.5);
+    padding: 4vh;
+
+}
+
+.slide .active {
+    background-color: #4C11EA !important;
+}
+
+/*Seção por dia da semana*/
+
+::selection {
+    color: #fff;
+    background: #4C11EA;
+}
+
+.wrapper {
+    max-width: 1100px;
+}
+
+.wrapper nav {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .items {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.seletor {
+    display: none;
+    border-color: #4C11EA;
+}
+
+.items span {
+    padding: 7px 25px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    background-color: #140152;
+    text-shadow: -1px -2px 6px rgba(217, 217, 217, 0.4), 0px 2px 5px rgba(217, 217, 217, 0.4);
+    border-radius: 10px;
+    border: 1px solid #434247;
+    transition: all 0.3s ease;
+}
+
+.items span.active,
+.items span:hover {
+    color: #fff;
+    background: #4C11EA;
+    text-shadow: -1px -2px 6px rgba(20, 1, 82, 0.9), 0px 2px 5px rgba(20, 1, 82, 0.9);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery .image {
+    width: calc(100% / 5);
+    padding: 7px;
+}
+
+.gallery .image a {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery .image img {
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.gallery .image:hover img {
+    transform: scale(1.1);
+}
+
+.gallery .image.hide {
+    display: none;
+}
+
+.gallery .image.show {
+    animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1140px) {
+    .items span {
+        display: none;
+    }
+
+    .seletor {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery .image {
+        width: calc(100% / 3);
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery .image {
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper nav .items {
+        max-width: 600px;
+    }
+
+    nav .items span {
+        padding: 7px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        margin: 30px auto;
+    }
+
+    .wrapper nav .items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav .items span {
+        margin: 5px;
+    }
+
+    .gallery .image {
+        width: 100%;
+    }
+}
+
+/* Rodapé*/
+
+.footer {
+    padding: 50px 0;
+    background-color: #1A1919;
+    color: #dadada;
+}
+
+.footer h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #4C11EA;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul a:hover {
+    opacity: 1;
+}
+
+.footer .icons-social {
+    text-align: right;
+    font-size: 28px;
+
+
+
+}
+
+.icons-social .facebook {
+    color: #3b64a5;
+}
+
+.icons-social .twitter {
+    color: #00acee;
+}
+
+.icons-social .youtube {
+    color: #c4302b;
+    margin-right: 5px;
+}
+
+.icons-social .instagram {
+
+    color: #d1008b
+}
+
+
+
+
+@media (max-width:767px) {
+    .footer .item {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .item.social {
+        text-align: center;
+    }
+}
+
+.footer .item.social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #1A1919;
+    margin-left: 10px;
+    margin-top: 22px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer .item.social>a:hover {
+    opacity: 0.9;
+}
+
+@media (max-width:991px) {
+    .footer .item.social>a {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .footer .item.social>a {
+        margin-top: 10px;
+    }
+}
+
+.footer .copyright {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.6;
 }
