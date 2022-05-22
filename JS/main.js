@@ -1,13 +1,3 @@
-function ListaFilme() {
-    let data = {
-        nome: document.getElementById('nome').value,
-        id: document.getElementById('ID').value,
-        sinopse: document.getElementById('sinopse').value,
-        classificação: document.getElementById('classificacao').value,
-        dt_nascimento: document.getElementById('dt_estreia').value
-    }
-    axios.get('http://localhost:3001/api/v1/filme', data)
-}
 (function($) {
 
 	var	$window = $(window),

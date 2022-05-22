@@ -2,39 +2,66 @@
 <html>
 	<head>
 		<title>Filme</title>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/style.css">
 		<script src="https://kit.fontawesome.com/b0de754388.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="homepage is-preload">
+
+		<header>
+
+			<nav>
+				<div class="menu-icon">
+					<span class="fas fa-bars"></span>
+				</div>
+				<div class="logo">
+					<a href="index.html"><img  src="img/LOGO.png" alt="" width="120" height="auto"></a>
+				</div>
+				<div class="nav-items">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Feedback</a></li>
+				</div>
+	
+				<div class="search-icon">
+					<span class="fas fa-search"></span>
+				</div>
+				<div class="login-icon">
+					<span class="fas fa-user"></span>
+				</div>
+	
+				<div class="btn-search">
+					<span><i class="fas fa-search"> </i> Buscar</span>
+				</div>
+				<div class="btn-login">
+					<a href="login.html"><span><i class="fas fa-user "></i> Login</span></a>
+				</div>
+	
+				<div class="cancel-icon">
+					<span class="fas fa-times"></span>
+				</div>
+				<form action="#" class="form">
+					<input type="search" class="search-data" placeholder="Search" required>
+					<button type="submit" class="fas fa-search"></button>
+				</form>
+			</nav>
+	
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<section id="header" class="wrapper">
-				
 
 					<!-- Logo -->
-						<div id="logo">
-							<img src="" alt="">
-							<h1 id="nome"><a>Doutor Estranho no multiverso da loucura</a></h1>
-							<p id="dt_estreia">Data de lançamento: 4 de maio de 2022 (Brasil) </p>
-						</div>
-
-					<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="index.html">Inicio</a></li>
-							<li class="current"><a href="login.html">Login</a></li>
-							<li>
-								<a href="#">Buscar</a>
-								<ul>
-									<li><a href="#">Buscar</a></li>
-									<li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
+					<div id="logo">
+						<img src="" alt="">
+						<h1 id="nome"><a>Doutor Estranho no multiverso da loucura</a></h1>
+						<p id="dt_estreia">Data de lançamento: 4 de maio de 2022 (Brasil) </p>
+					</div>
 
 				</section>
 
@@ -161,6 +188,8 @@
 
 		<!-- Scripts -->
 			<script src="JS/main.js"></script>
+			<script src="JS/filme.js"></script> 
+			<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 	</body>
 </html>
