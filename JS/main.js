@@ -67,7 +67,7 @@ function ListaFilme() {
 					visibleClass: 'navPanel-visible'
 				});
 
-})(jQuery);
+});
 //Barra de navegação
 const menuBtn = document.querySelector(".menu-icon span");
 const searchIconBtn = document.querySelector(".search-icon");
