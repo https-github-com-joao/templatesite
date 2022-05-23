@@ -2441,92 +2441,7 @@ input, select, textarea {
 
 	@media screen and (max-width: 980px) {
 
-		/* Nav */
-
-			#page-wrapper {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				padding-bottom: 1px;
-			}
-
-			#titleBar {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10001;
-				background: none;
-			}
-
-				#titleBar .title {
-					display: none;
-				}
-
-				#titleBar .toggle {
-					text-decoration: none;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 60px;
-					height: 44px;
-				}
-
-					#titleBar .toggle:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						display: inline-block;
-						font-style: normal;
-						font-variant: normal;
-						text-rendering: auto;
-						line-height: 1;
-						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
-						font-weight: 900;
-					}
-
-					#titleBar .toggle:before {
-						-moz-transition: all .15s ease-in-out;
-						-webkit-transition: all .15s ease-in-out;
-						-ms-transition: all .15s ease-in-out;
-						transition: all .15s ease-in-out;
-						text-decoration: none;
-						content: '\f0c9';
-						font-size: 14px;
-						position: absolute;
-						top: 6px;
-						left: 6px;
-						display: block;
-						width: 54px;
-						height: 38px;
-						line-height: 38px;
-						text-align: center;
-						color: rgba(255, 255, 255, 0.75);
-						background-color: rgba(92, 95, 103, 0.5);
-						border-radius: 0.25em;
-					}
-
-					#titleBar .toggle:active:before {
-						background-color: rgba(92, 95, 103, 0.75);
-					}
-
 	}
-
 /* Small */
 
 	@media screen and (max-width: 736px) {
@@ -2842,8 +2757,8 @@ input, select, textarea {
 	  }
 /*FilmesSemanais*/
 ::selection{
-	color: #fff;
 	background: #007bff;
+	align-items:center;
   }
   body{
 	padding: 10px;
@@ -2885,6 +2800,7 @@ input, select, textarea {
   }
   .gallery .image{
 	padding: 7px;
+	align-items: center;
   }
   .gallery .image span{
 	display: flex;
@@ -3021,9 +2937,8 @@ input, select, textarea {
 	text-align: center;
   }
 /*CABEÇALHO*/
-
-nav {
-
+header {
+    background: black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -3033,18 +2948,18 @@ nav {
 
 }
 
-nav .nav-items {
+header .nav-items {
     display: flex;
     flex: 1;
     padding: 0 0 0 40px;
 }
 
-nav .nav-items li {
+header .nav-items li {
     list-style: none;
     padding: 0 15px;
 }
 
-nav .nav-items li a {
+header .nav-items li a {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -3052,7 +2967,7 @@ nav .nav-items li a {
     display: none;
 }
 
-nav .nav-items li a:hover {
+header .nav-items li a:hover {
     color: #4C11EA;
 }
 
@@ -3070,7 +2985,7 @@ nav .nav-items li a:hover {
     display: none;
 }
 
-nav form {
+header form {
     display: flex;
     height: 38px;
     padding: 5px;
@@ -3091,7 +3006,7 @@ nav form {
     transition: top 0.3s ease, opacity 0.1s ease;
 }
 
-nav form .search-data {
+header form .search-data {
     width: 90%;
     height: 100%;
     padding: 0 10px;
@@ -3102,7 +3017,7 @@ nav form .search-data {
     background: none;
 }
 
-nav form button {
+header form button {
     padding: 0 10px;
     color: #fff;
     font-size: 17px;
@@ -3112,18 +3027,18 @@ nav form button {
     cursor: pointer;
 }
 
-nav form button:hover {
+header form button:hover {
     background: #240677;
 }
 
 
-nav form.active {
+header form.active {
     top: 95px;
     opacity: 1;
     pointer-events: auto;
 }
 
-nav form:before {
+header form:before {
     position: absolute;
     content: "";
     top: -13px;
@@ -3136,7 +3051,7 @@ nav form:before {
     margin: -20px 0 0;
 }
 
-nav form:after {
+header form:after {
     position: absolute;
     content: '';
     height: 60px;
@@ -3150,14 +3065,14 @@ nav form:after {
     transform: translate(-50%, -50%);
 }
 
-nav .cancel-icon.show {
+header .cancel-icon.show {
     display: block;
 }
 
-nav .login-icon,
-nav .menu-icon,
-nav .cancel-icon,
-nav .search-icon {
+header .login-icon,
+header .menu-icon,
+header .cancel-icon,
+header .search-icon {
     width: 40px;
     text-align: center;
     margin: 0 50px;
@@ -3167,31 +3082,31 @@ nav .search-icon {
     display: none;
 }
 
-nav .btn-search.hide,
-nav .menu-icon span,
-nav .cancel-icon,
-nav .search-icon {
+header .btn-search.hide,
+header .menu-icon span,
+header .cancel-icon,
+header .search-icon {
     display: none;
 }
 
 @media (max-width: 1245px) {
-    nav {
+    header {
         padding: 0 20px;
     }
 
 }
 
 @media (max-width: 1140px) {
-    nav {
+    header {
         padding: 0px;
     }
 
-    nav .logo {
+    header .logo {
         flex: 2;
         text-align: center;
     }
 
-    nav .nav-items {
+    header.nav-items {
         position: fixed;
         z-index: 99;
         top: 70px;
@@ -3205,16 +3120,16 @@ nav .search-icon {
         transition: left 0.3s ease;
     }
 
-    nav .nav-items.active {
+    header .nav-items.active {
         left: 0px;
     }
 
-    nav .nav-items li {
+    header .nav-items li {
         line-height: 40px;
         margin: 30px 0;
     }
 
-    nav .nav-items li a {
+    header .nav-items li a {
         font-size: 20px;
     }
 
@@ -3224,46 +3139,65 @@ nav .search-icon {
     }
 
 
-    nav .menu-icon {
+    header .menu-icon {
         display: block;
     }
 
-    nav .login-icon,
-    nav .search-icon,
-    nav .menu-icon span {
+    header .login-icon,
+    header .search-icon,
+    header .menu-icon span {
         display: block;
     }
 
-    nav .menu-icon span.hide,
-    nav .search-icon.hide {
+    header .menu-icon span.hide,
+    header .search-icon.hide {
         display: none;
     }
 }
 
-nav .logo.space {
+header .logo.space {
     color: #4C11EA;
     padding: 0 5px 0 0;
 }
 
 @media (max-width: 980px) {
 
-    nav .menu-icon,
-    nav .cancel-icon,
-    nav .search-icon {
+    header .menu-icon,
+    header .cancel-icon,
+    header .search-icon {
         margin: 0 20px;
     }
 
-    nav form {
+    header form {
         right: 30px;
     }
 }
 
 @media (max-width: 350px) {
 
-    nav .menu-icon,
-    nav .cancel-icon,
-    nav .search-icon {
+    header .menu-icon,
+    header .cancel-icon,
+    header .search-icon {
         margin: 0 10px;
         font-size: 16px;
     }
+}
+
+
+/*Resonsivo Video*/
+figure { width: 90%; min-width: 17.5em; margin:0 auto;}
+figcaption { font: 120% sans-serif; text-align: center;}
+.boxVideo {
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 25px;
+    height: 0;
+    margin:0 auto;
+}
+.boxVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
