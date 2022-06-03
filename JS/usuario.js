@@ -8,18 +8,20 @@ function cadastraUsuario() {
     }
     axios.post('http://localhost:3001/api/v1/usuario', data)
     .then(res => {
-        alert('cadastro realizado com sucesso.');
         document.location = 'login.html';
     })
-    .catch(error => alert('ocorreu um error ao cadastrar'))
+    .catch(error => swal('Error de cadastro:', 'ocorreu um error ao cadastrar', 'error'))
 }
 
 function login() {
+    let email = document.getElementById("email");
+    let senha = document.getElementById("senha");
 
-    axios.post('http://localhost:3001/api/v1/usuario/login', data)
-    .then(res => {
-        localStorage.setItem('token', res.data.token)
-        document.location = 'index.html';
-    })
-    .catch(error => alert(error.response.data.error))
+    if (email.value == "admin@gmail.com" && senha.value == "123") {
+        localStorage.setItem("acesso", true);
+        
+        window.location.href = "index.html";
+    } else {
+        swal("Error em realizar o login:", "Usuario ou senha invalidos!", "error");
+    }
 }
