@@ -1,37 +1,3 @@
-//Barra de navegação
-const menuBtn = document.querySelector(".menu-icon span");
-const searchIconBtn = document.querySelector(".search-icon");
-const searchBtn = document.querySelector(".btn-search");
-const cancelBtn = document.querySelector(".cancel-icon");
-const items = document.querySelector(".nav-items");
-const form = document.querySelector("form");
-menuBtn.onclick = () => {
-  items.classList.add("active");
-  menuBtn.classList.add("hide");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-}
-cancelBtn.onclick = () => {
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
-  searchIconBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active");
-  cancelBtn.style.color = "#ff3d00";
-}
-searchIconBtn.onclick = () => {
-  form.classList.add("active");
-  searchIconBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-}
-searchBtn.onclick = () => {
-  form.classList.add("active");
-  searchBtn.classList.add("hide");
-  cancelBtn.classList.add("show");
-}
-
-
 const filterItem = document.querySelector(".items");
 const filterImg = document.querySelectorAll(".gallery .image");
 
@@ -56,5 +22,33 @@ window.onload = () => {
   for (let i = 0; i < filterImg.length; i++) {
     filterImg[i].setAttribute("onclick", "preview(this)"); 
   }
+}
+
+const filtroSeletor = document.querySelector("#seletor");
+const filtroImg = document.querySelectorAll(".gallery .image");
+
+window.onload = () => { //após a janela carregada
+    filtroSeletor.onchange = (selectedItem) => { //se o usuário clicar em filtroImg div
+        console.log("las")
+        let seletor = document.getElementById("seletor") //se o item selecionado pelo usuário tiver a classe .item
+        let filtroName = seletor.options[seletor.selectedIndex].value; //obtendo o valor do nome de dados do item selecionado pelo usuário e armazenando em uma variável filtername
+        console.log(filtroName)
+        filtroImg.forEach((image) => {
+            let filtroImges = image.getAttribute("data-name"); //obtendo o valor do nome dos dados da imagem
+            //se o valor do nome de dados do item selecionado pelo usuário for igual ao valor do nome de dados das imagens
+            //ou o valor do nome de dados do item selecionado pelo usuário é igual a "todos"
+            if ((filtroImges == filtroName )) {
+                console.log("entrou no if")
+                image.classList.remove("hide"); //primeiro remove a classe hide da imagem
+                image.classList.add("show"); //adiciona a classe show na imagem
+            } else {
+                image.classList.add("hide"); //adiciona ocultar classe na imagem
+                image.classList.remove("show"); //remove a classe show da imagem
+            }
+        });
+    }
+}
+for (let i = 0; i < filtroImg.length; i++) {
+    filtroImg[i].setAttribute("onclick", "preview(this)"); //adicionando o atributo onclick em todas as imagens disponíveis
 }
  
