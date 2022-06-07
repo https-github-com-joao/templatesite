@@ -27,7 +27,6 @@ window.onload = () => {
 const filtroSeletor = document.querySelector("#seletor");
 const filtroImg = document.querySelectorAll(".gallery .image");
 
-window.onload = () => { //após a janela carregada
     filtroSeletor.onchange = (selectedItem) => { //se o usuário clicar em filtroImg div
         console.log("las")
         let seletor = document.getElementById("seletor") //se o item selecionado pelo usuário tiver a classe .item
@@ -47,8 +46,5 @@ window.onload = () => { //após a janela carregada
             }
         });
     }
-}
-for (let i = 0; i < filtroImg.length; i++) {
-    filtroImg[i].setAttribute("onclick", "preview(this)"); //adicionando o atributo onclick em todas as imagens disponíveis
-}
+
  
