@@ -3,7 +3,7 @@
 	<head>
 		<title>Filme</title>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/b0de754388.js" crossorigin="anonymous"></script>
@@ -59,8 +59,8 @@
 					<!-- Logo -->
 					<div id="logo">
 						<img src="" alt="">
-						<h1 id="nome"><a>Doutor Estranho no multiverso da loucura</a></h1>
-						<p id="dt_estreia">Data de lançamento: 4 de maio de 2022 (Brasil) </p>
+						<h1 class="Animaçao" id="nome"><a>Doutor Estranho no multiverso da loucura</a></h1>
+						<p  class="Animaçao1"	id="dt_estreia">Data de lançamento: 4 de maio de 2022 (Brasil) </p>
 					</div>
 
 				</section>
@@ -69,41 +69,52 @@
 				<section id="main" class="wrapper style2">
 					<div class="title">Informações</div>
 					<div class="container">
-
-						<!-- Image -->
-						<figure>
-							<div class="boxVideo">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/mOuTbZhHCnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</figure>
-
 						<!-- Features -->
 							<section id="features">
 								<div class="feature-list">
 									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="fa fa-play">Direção</h3>
-												<p>Scott Derrickson.</p>
-											</section>
+										<div class="col">
+											<div class="media">
+												<img class="align-self-start mr-3 icon" src="img/icondiretor.svg" alt="Imagem de exemplo genérica">
+												<div class="media-body">
+												  <h5 class="mt-0 text" >Direção</h5>
+												  <p class="text1">Scott Derrickson.</p>
+												</div>
+											  </div>
 										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="fa-solid fa-circle-info">Elenco</h3>
-												<p>Benedict Cumberbatch,<br> Elizabeth Olsen,<br> Benedict Wong.</p>
-											</section>
+										<div class="col">
+											<div class="media">
+												<img class="align-self-start mr-3 icon" src="img/icongroup.svg" alt="Imagem de exemplo genérica">
+												<div class="media-body">
+												  <h5 class="mt-0 text" >Elenco</h5>
+												  <p class="text1">Benedict Cumberbatch,<br> Elizabeth Olsen,<br> Benedict Wong.</p>
+												</div>
+											  </div>
 										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="fa-solid fa-comment">Sinopse</h3>
-												<p id="sinopse"></p>
-											</section>
+										<div class="w-100"></div>
+										<div class="col">
+											<div class="media">
+												<img class="align-self-start mr-3 icon" src="img/iconsinopse.svg" alt="Imagem de exemplo genérica">
+												<div class="media-body">
+												  <h5 class="mt-0 text" >Sinopse</h5>
+												  <p class="text1">O aguardado filme trata da jornada do Doutor
+													  <br>Estranho rumo ao desconhecido. Além de receber<br>
+													  ajuda de novos aliados místicos e outros já<br>
+													  conhecidos do público, o personagem atravessa as<br>
+													  realidades alternativas incompreensíveis e perigosas<br>
+													  do Multiverso para enfrentar um novo e misterioso adversário.
+												  </p>
+												</div>
+											  </div>
 										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3 class="fa-solid fa-people-group"> Classificação</h3>
-												<p id="classificacao">.</p>
-											</section>
+										<div class="col">
+											<div class="media">
+												<img class="align-self-start mr-3 icon " src="img/age-group.png" alt="Imagem de exemplo genérica">
+												<div class="media-body">
+												  <h5 class="mt-0 text" >Classificação</h5>
+												  <p class="text1"></p>
+												</div>
+										</div>
 										</div>
 									</div>
 							</section>
@@ -118,7 +129,7 @@
 						<!-- filter Items -->
 						<nav>
 						  <div class="items">
-							<span class="item active" data-name="Seagunda">Segunda</span>
+							<span class="item active d-none" data-name="Seagunda"></span>
 							<span class="item" data-name="Segunda">Segunda</span>
 							<span class="item" data-name="terça">Terça</span>
 							<span class="item" data-name="Quarta">Quarta</span>
@@ -135,7 +146,7 @@
 							  <div class="col-sm-12">
 								<div class="card">
 								  <div class="card-body">
-									<h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+									<h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 									<button type="button" class="btn btn-outline-warning">20:35</button>
 									<button type="button" class="btn btn-outline-warning">12:10</button>
 									<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -150,7 +161,7 @@
 								<div class="col-sm-12">
 								  <div class="card">
 									<div class="card-body">
-									  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+									  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 									  <button type="button" class="btn btn-outline-warning">20:35</button>
 									  <button type="button" class="btn btn-outline-warning">12:10</button>
 									  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -165,7 +176,7 @@
 								  <div class="col-sm-12">
 									<div class="card">
 									  <div class="card-body">
-										<h5 class="card-title"><b>Sala4</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										<h5 class="card-title"><b>Sala4</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										<button type="button" class="btn btn-outline-warning">20:35</button>
 										<button type="button" class="btn btn-outline-warning">12:10</button>
 										<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -180,7 +191,7 @@
 							  <div class="col-sm-12">
 								<div class="card">
 								  <div class="card-body">
-									<h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+									<h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 									<button type="button" class="btn btn-outline-warning">20:35</button>
 									<button type="button" class="btn btn-outline-warning">12:10</button>
 									<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -195,7 +206,7 @@
 								<div class="col-sm-12">
 								  <div class="card">
 									<div class="card-body">
-									  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+									  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 									  <button type="button" class="btn btn-outline-warning">20:35</button>
 									  <button type="button" class="btn btn-outline-warning">12:10</button>
 									  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -210,7 +221,7 @@
 								  <div class="col-sm-12">
 									<div class="card">
 									  <div class="card-body">
-										<h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										<h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										<button type="button" class="btn btn-outline-warning">20:35</button>
 										<button type="button" class="btn btn-outline-warning">12:10</button>
 										<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -225,7 +236,7 @@
 								  <div class="col-sm-12">
 									<div class="card">
 									  <div class="card-body">
-										<h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										<h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										<button type="button" class="btn btn-outline-warning">20:35</button>
 										<button type="button" class="btn btn-outline-warning">12:10</button>
 										<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -240,7 +251,7 @@
 								  <div class="col-sm-12">
 									<div class="card">
 									  <div class="card-body">
-										<h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										<h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										<button type="button" class="btn btn-outline-warning">20:35</button>
 										<button type="button" class="btn btn-outline-warning">12:10</button>
 										<button type="button" class="btn btn-outline-warning">22:00</button>
@@ -255,7 +266,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala4</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala4</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -270,7 +281,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -285,7 +296,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -300,7 +311,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -315,7 +326,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -330,7 +341,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -345,7 +356,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -360,7 +371,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -375,7 +386,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -390,7 +401,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -405,7 +416,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -420,7 +431,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -435,7 +446,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -450,7 +461,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -465,7 +476,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -480,7 +491,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -495,7 +506,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -510,7 +521,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -525,7 +536,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -540,7 +551,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -555,7 +566,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -570,7 +581,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -585,7 +596,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -600,7 +611,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -615,7 +626,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -630,7 +641,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -645,7 +656,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -660,7 +671,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -675,7 +686,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -690,7 +701,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -705,7 +716,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -720,7 +731,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -735,7 +746,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -750,7 +761,7 @@
 									<div class="col-sm-12">
 									  <div class="card">
 										<div class="card-body">
-										  <h5 class="card-title"><b>Sala2</b><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
+										  <h5 class="card-title"><b>Sala2</b><br><br><button type="button" class="btn btn-primary btn-sm">Dublado</button>&nbsp<button type="button" class="btn btn-primary btn-sm">Dublado</button></h5>
 										  <button type="button" class="btn btn-outline-warning">20:35</button>
 										  <button type="button" class="btn btn-outline-warning">12:10</button>
 										  <button type="button" class="btn btn-outline-warning">22:00</button>
@@ -792,20 +803,7 @@
             <span><i class="fab fa-instagram"></i></span>
          </div>
       </div>
-						</header>
-						<div class="row">
-							<div class="col-6 col-12-medium">
 
-								<!-- Contact Form -->
-									<section>
-		
-									</section>
-
-							</div>
-							<div class="col-6 col-12-medium">
-
-
-				</section>
 
 		</div>
 
