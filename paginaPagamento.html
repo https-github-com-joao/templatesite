@@ -2,107 +2,100 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/stylePagamento.css">
-  <title>Pagamento</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylePagamento.css">
+    <title>Pagamento</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="/index.html"><img src="img/LOGO.png" alt="" width="120" height="auto"></a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <h4>Enfetuar Pagamento</h4>
-    <form action="" method="post" class="pagamento">
-      <div class="row">
-        <div class="form-floating col-12 mb-3">
-          <input type="text" class="form-control" id="numeroCartao" placeholder="Número do Cartão"
-            onkeypress="$(this).mask('0000 0000 0000 0000')">
-          <label for="numeroCartao">Número do Cartão</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="nomeTitular" placeholder="Nome Impresso no Cartão">
-          <label for="nomeTitular">Nome Impresso no Cartão</label>
-        </div>
-        <div class="form-floating mb-3 col-6">
-          <input type="text" class="form-control" id="validade" placeholder="Validade"
-            onkeypress="$(this).mask('00/00')">
-          <label for="validade">Validade</label>
-        </div>
-        <div class="form-floating mb-3 col-6">
-          <input type="text" class="form-control" id="CVC" placeholder="CVC" onkeypress="$(this).mask('000')">
-          <label for="CVC">CVC</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="CPFTitular" placeholder="CPF do Titular"
-            onkeypress="$(this).mask('000.000.000-00')">
-          <label for="cpfTitular">CPF do Titular</label>
-        </div>
-      </div>
-    </form>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button class="btn btn-primary me-md-2 btn-confirmar" type="button">Concluir Pagamento</button>
-    </div>
-
-
-
-  </main>
-
-
-  <footer class="footer">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-4 col-md-3 item">
-                <h3>FILMES</h3>
-                <ul>
-                    <li><a href="#">Programação</a></li>
-                    <li><a href="#">Em Cartaz</a></li>
-                    <li><a href="#">Ingressos</a></li>
-                </ul>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="img/LOGO.png" alt="" width="120" height="auto"></a>
             </div>
-            <div class="col-sm-4 col-md-3 item">
-                <h3>MEU CINEART</h3>
-                <ul>
-                    <li><a href="#">Cadastre-se</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h4>Enfetuar Pagamento</h4>
+        <form action="" class="pagamento">
+            <div class="row">
+                <div class="form-floating col-12 mb-3">
+                    <input type="text" class="form-control" id="nome_cartao" placeholder="Número do Cartão" onkeypress="$(this).mask('0000 0000 0000 0000')">
+                    <label for="numeroCartao">Número do Cartão</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="num_cartao" placeholder="Nome Impresso no Cartão">
+                    <label for="nomeTitular">Nome Impresso no Cartão</label>
+                </div>
+                <div class="form-floating mb-3 col-6">
+                    <input type="text" class="form-control" id="validade" placeholder="Validade" onkeypress="$(this).mask('00/00')">
+                    <label for="validade">Validade</label>
+                </div>
+                <div class="form-floating mb-3 col-6">
+                    <input type="text" class="form-control" id="cvc" placeholder="CVC" onkeypress="$(this).mask('000')">
+                    <label for="CVC">CVC</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="cpf" placeholder="CPF do Titular" onkeypress="$(this).mask('000.000.000-00')">
+                    <label for="cpfTitular">CPF do Titular</label>
+                </div>
             </div>
-            <div class="col-sm-4 col-md-3 item">
-                <h3>CONTATO</h3>
-                <ul>
-                    <li><a href="#">Central de Atendimento</a></li>
-                    <li><a href="#">Trabalhe Conosco</a></li>
-                    <li><a href="#">Benefits</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 icons-social">
-                <a href="#"><i class="fa-brands fa-facebook fa-xl facebook"></i></i></i></a>
-                <a href="#"><i class="fa-brands fa-twitter fa-xl twitter"></i></i></a>
-                <a href="#"><i class="fa-brands fa-youtube fa-xl youtube"></i></i></a><a href="#"><i
+        </form>
+        <button onclick="pagamento()" class="btn btn-primary me-md-2 btn-confirmar" type="button">Concluir Pagamento</button>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>FILMES</h3>
+                    <ul>
+                        <li><a href="#">Programação</a></li>
+                        <li><a href="#">Em Cartaz</a></li>
+                        <li><a href="#">Ingressos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>MEU CINEART</h3>
+                    <ul>
+                        <li><a href="#">Cadastre-se</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>CONTATO</h3>
+                    <ul>
+                        <li><a href="#">Central de Atendimento</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 icons-social">
+                    <a href="#"><i class="fa-brands fa-facebook fa-xl facebook"></i></i></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl twitter"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-xl youtube"></i></i></a><a href="#"><i
                         class="fa-brands fa-instagram fa-xl instagram"></i></a>
-                <p class="copyright">Company CineArt © 2022</p>
+                    <p class="copyright">Company CineArt © 2022</p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <script src="JS/scriptPagamento.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
