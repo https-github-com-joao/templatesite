@@ -2622,9 +2622,9 @@ color: #d1d1d1;
 	align-items: center;
 }
 .botao{
-	width: 32px;
-	height: 32px;
-	margin: 20px;
+	width: 12px;
+	height: 15px;
+margin-left: 1em;
 }
 .textbotao{
 color: #fff;
@@ -2633,46 +2633,94 @@ text-align: center;
 .infoselecao{
 	margin: auto;
 }
-.areapoltrona{
-align-items: center;
-text-align: center;
-}
 /*Poutronas*/
-.poltrona1{
-	width: 32px;
-	height: 32px;
-	margin: 20px;
-		display: inline-block;
+.movie-container select{
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
-.poltrona2{
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 50px;
 }
-.poltrona3{
-	width: 32px;
-	height: 32px;
-	display: inline-block;
+.container1{
+	display: none;
 }
-.poltrona4{
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	margin: 20px;
+
+.seat{
+    background-color:#444451;
+    height:30px;
+    width: 30px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-.poltrona5{
-	width: 32px;
-	height: 32px;
-	display: inline-block;
-	margin: 20px;
+
+.seat.selected{
+    background-color: #00e5fa;
 }
-.fileiras{
-	column-count: 20;
-	margin-left: 12em;
-	display: inline-block;
+
+
+.seat:nth-of-type(2){
+    margin-right: 18px;
 }
-.fileiras2{
-	column-count: 20;
-	margin-left: 12em;
+
+.seat:nth-last-of-type(2){
+    margin-left: 18px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase{
+    background: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color:#777;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small{
+    margin-left: 2px;
+}
+
+.roww{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}			
+.screen{
+    background-color: rgb(103, 103, 103);
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+.movie-container{
+    margin: 20px 0;
 }
