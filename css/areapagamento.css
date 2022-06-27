@@ -2630,6 +2630,11 @@ margin-left: 1em;
 color: #fff;
 text-align: center;
 }
+.bt{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .infoselecao{
 	margin: auto;
 }
