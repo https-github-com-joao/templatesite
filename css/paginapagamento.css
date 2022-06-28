@@ -11,6 +11,13 @@
 body {
     background-color: #1b2027;
 }
+.ds{
+    align-items: center;
+    text-align: center;
+}
+.text{
+    text-align: center;
+}
 
 /* CABEÇALHO */
 

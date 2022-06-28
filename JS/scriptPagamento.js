@@ -10,5 +10,5 @@ function pagamento() {
         .then(res => {
             document.location = 'index.html';
         })
-        .catch(error => alert('Error de cadastro:', 'ocorreu um error ao cadastrar', 'error'))
+        .catch(error => swal('Error de Pagamento:', 'ocorreu um error ao efetuar o pagamento', 'error'))
 }

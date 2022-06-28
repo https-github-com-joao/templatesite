@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/paginapagamento.css">
+    <title>Pagamento</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="img/LOGO.png" alt="" width="120" height="auto"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h4 class="text">Escolha sua forma de pagamento</h4>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Cartão de Credito/Debito
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Número do Cartão</label>
+                          <input type="text" class="form-control" id="nome_cartao" aria-describedby="emailHelp" onkeypress="$(this).mask('0000 0000 0000 0000')">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nome Impresso no Cartão</label>
+                            <input type="text" class="form-control" id="num_cartao" aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Validade</label>
+                            <input type="text" class="form-control" id="validade" aria-describedby="emailHelp" onkeypress="$(this).mask('00/00')">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">CVC</label>
+                            <input type="text" class="form-control" id="cvc" aria-describedby="emailHelp" onkeypress="$(this).mask('000')">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">CPF do Titular</label>
+                            <input type="text" class="form-control" id="cpf" aria-describedby="emailHelp">
+                          </div>                          
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Salvar dados do cartão</label>
+                        </div>
+                        <button onclick="pagamento()" class="btn btn-primary me-md-2 btn-confirmar" type="button">Concluir Pagamento</button>
+                      </form>
+                </div>
+              </div>
+            </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Pix
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body ds">
+                    <h3 class="border border-primary">Aponte a câmera do seu celular ou leitor de qr-code</h3>
+                 <span> </span><img src="img/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg.png" alt="" width="300" height="300">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>FILMES</h3>
+                    <ul>
+                        <li><a href="#">Programação</a></li>
+                        <li><a href="#">Em Cartaz</a></li>
+                        <li><a href="#">Ingressos</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>MEU CINEART</h3>
+                    <ul>
+                        <li><a href="#">Cadastre-se</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>CONTATO</h3>
+                    <ul>
+                        <li><a href="#">Central de Atendimento</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 icons-social">
+                    <a href="#"><i class="fa-brands fa-facebook fa-xl facebook"></i></i></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-xl twitter"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-xl youtube"></i></i></a><a href="#"><i
+                        class="fa-brands fa-instagram fa-xl instagram"></i></a>
+                    <p class="copyright">Company CineArt © 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="JS/scriptPagamento.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
