@@ -17,7 +17,7 @@ function login() {
     let email = document.getElementById("email");
     let senha = document.getElementById("senha");
 
-    if (email.value == "admin@gmail.com" && senha.value == "123") {
+    if (email.value == "cineart@gmail.com" && senha.value == "123") {
         localStorage.setItem("acesso", true);
         
         window.location.href = "index.html";
