@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="css/areapagamento.css" />
+		<link rel="stylesheet" href="css/paginapagamento.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/b0de754388.js" crossorigin="anonymous"></script>
 	</head>
@@ -148,45 +149,97 @@
 									<div class="seat occupied bg-danger"></div>
 									<div class="seat occupied bg-danger"></div>
 								</div>
-								<button type="button" href="paginadepagamentoat.html" class="btn btn-outline-primary bt" >Proximo</button>
 							</div>
-						
+							<div class="text1">
+								<h4 class=" text">Escolha sua forma de pagamento</h4><br>
+								<p class="text">Você selecionou <span id="count">0</span>
+									o valor é R$<span id="total">0</span>
+								</p>
+							</div>		
 				</section>
-
-			<!-- Footer -->
-				<section id="footer" class="wrapper">
-					<div class="title">Rede Sociais</div>
-					<div class="container">
-						<header class="style1">
-      <div class="redesocial">
-         <div class="icon facebook">
-            <div class="tooltip">
-               Facebook
-            </div>
-            <span><i class="fab fa-facebook-f"></i></span>
-         </div>
-         <div class="icon twitter">
-            <div class="tooltip">
-               Twitter
-            </div>
-            <span><i class="fab fa-twitter"></i></span>
-         </div>
-         <div class="icon instagram">
-            <div class="tooltip">
-               Instagram
-            </div>
-            <span><i class="fab fa-instagram"></i></span>
-         </div>
-      </div>
-
+		
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+					  <div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+						  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Cartão de Credito/Debito
+						  </button>
+						</h5>
+					  </div>
+				  
+					  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+								  <label for="exampleInputEmail1">Número do Cartão</label>
+								  <input type="text" class="form-control" id="nome_cartao" aria-describedby="emailHelp" onkeypress="$(this).mask('0000 0000 0000 0000')">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Nome Impresso no Cartão</label>
+									<input type="text" class="form-control" id="num_cartao" aria-describedby="emailHelp">
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">Validade</label>
+									<input type="text" class="form-control" id="validade" aria-describedby="emailHelp" onkeypress="$(this).mask('00/00')">
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">CVC</label>
+									<input type="text" class="form-control" id="cvc" aria-describedby="emailHelp" onkeypress="$(this).mask('000')">
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputEmail1">CPF do Titular</label>
+									<input type="text" class="form-control" id="cpf" aria-describedby="emailHelp">
+								  </div>                          
+								<div class="form-group form-check">
+								  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								  <label class="form-check-label" for="exampleCheck1">Salvar dados do cartão</label>
+								</div>
+								<button onclick="pagamento()" class="btn btn-primary me-md-2 btn-confirmar" type="button">Concluir Pagamento</button>
+							  </form>
+						</div>
+					  </div>
+					</div>
+					  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+						  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+						  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Pix
+						  </button>
+						</h5>
+					  </div>
+					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body ds">
+							<h3 class="border border-primary">Aponte a câmera do seu celular ou leitor de qr-code</h3>
+						 <span> </span><img src="img/Link_pra_pagina_principal_da_Wikipedia-PT_em_codigo_QR_b.svg.png" alt="" width="300" height="300">
+						</div>
+					  </div>
+					</div>
+				  </div>
+		
 
 		</div>
 
 		<!-- Scripts -->
+		<script src="JS/scriptPagamento.js"></script>
 			<script src="JS/main.js"></script>
 			<script src="JS/filme.js"></script> 
 			<script src="JS/poltronas.js"></script> 
 			<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+				<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+				<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 	</body>
 </html>
