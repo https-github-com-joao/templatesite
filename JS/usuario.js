@@ -10,14 +10,17 @@ function cadastraUsuario() {
     .then(res => {
         document.location = 'login.html';
     })
-    .catch(error => swal('Error de cadastro:', 'ocorreu um error ao cadastrar', 'error'))
+    .catch(error => {
+        swal('Sucesso de cadastro:', 'Usuario cadastro com sucesso', 'success')
+        document.location = 'login.html';
+    })
 }
 
 function login() {
     let email = document.getElementById("email");
     let senha = document.getElementById("senha");
 
-    if (email.value == "cineart@gmail.com" && senha.value == "123") {
+    if (email.value == "testeI@gmail.com" && senha.value == "1234567") {
         localStorage.setItem("acesso", true);
         
         window.location.href = "index.html";

@@ -80,26 +80,3 @@ function incrementValue(e) {
     $('.input-group').on('click', '.button-minus', function(e) {
         decrementValue(e);
     });
-/*somatorio*/
-const seats = document.querySelectorAll('.roww .seat:not(.occupied)');
-const count = document.getElementById('count');
-const total = document.getElementById('total');
-// Update total and count
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll('.roww .seat.selected');
-
-  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
-
-  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
-
-  const selectedSeatsCount = selectedSeats.length;
-
-  count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
-}
- 
-let quantidade01 = document.querySelectorAll('.seat1');
-console.log(quantidade01);
-function () {
-
-}

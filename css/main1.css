@@ -2613,11 +2613,14 @@ header .logo.space {
 	opacity: 10px;
 }
 .text{
-	color: #007bff;
+	color: #4C11EA;
 }
 .text1{
 color: #d1d1d1;
 }
 .media{
 	align-items: center;
+}
+.icon{
+	filter: opacity(0.4) drop-shadow(0 0 0 #4C11EA); 
 }
